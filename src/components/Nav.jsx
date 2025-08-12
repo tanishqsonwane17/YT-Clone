@@ -1,10 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import 'remixicon/fonts/remixicon.css';
-
+import '../App.css'
 const Nav = () => {
   const [showNav, setShowNav] = useState(true);
   const [lastScroll, setLastScroll] = useState(0);
-
+const categories = [
+  "All",
+  "Music",
+  "Movies",
+  "Mixes",
+  "TSeries",
+  "Mithoon",
+  "Arijit Singh",
+  "Neha Kakkar",
+  "Badshah",
+  "Honey Singh",
+  "Shreya Ghoshal",
+  "Atif Aslam",
+  "KK",
+  "Sonu Nigam",
+  "Darshan Raval"
+];
   useEffect(() => {
     const handleScroll = () => {
       const currentScroll = window.scrollY;
@@ -45,16 +61,17 @@ const Nav = () => {
 
         </div>
       </ul>
-      <div className='w-full flex gap-3 overflow-x-auto pt-1 pb-3'>
-        <button className='bg-[#272727] py-1.5 px-5 rounded-md text-white'>All</button>
-        <button className='bg-[#272727] py-1.5 px-5 rounded-md text-white'>Music</button>
-        <button className='bg-[#272727] py-1.5 px-5 rounded-md text-white'>Movies</button>
-        <button className='bg-[#272727] py-1.5 px-5 rounded-md text-white'>Mixes</button>
-        <button className='bg-[#272727] py-1.5 px-5 rounded-md text-white'>TSeries</button>
-        <button className='bg-[#272727] py-1.5 px-5 rounded-md text-white'>Mithoon</button>
-      </div>
-    </div>
-  );
+       <div className="flex gap-2 overflow-x-auto flex-nowrap no-scrollbar">
+      {categories.map((cat, index) => (
+        <button 
+          key={index} 
+          className="bg-[#272727] py-1.5 px-5 rounded-md text-white flex items-center justify-center h-10 flex-shrink-0"
+        >
+          {cat}
+        </button>
+      ))}
+    </div>  </div>
+);  
 };
 
 export default Nav;

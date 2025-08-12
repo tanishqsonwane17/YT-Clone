@@ -27,18 +27,17 @@ const Details = () => {
   return (
     <div className="py-28 bg-black text-white px-4">
       {/* Video */}
-      <div className="aspect-video w-full mb-4">
-        <iframe
-          width="100%"
-          height="260"
-          src={embedUrl}
-          title={video.title}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        />
-      </div>
+<div className="w-full mb-4">
+  <iframe
+    className="w-full aspect-video md:h-[500px]" // mobile me aspect ratio, desktop me fixed 500px
+    src={embedUrl}
+    title={video.title}
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+  />
+</div>
 
       {/* Title */}
       <h2 className="text-lg font-semibold mb-2">{video.title}</h2>
