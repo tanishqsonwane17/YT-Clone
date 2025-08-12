@@ -1,20 +1,18 @@
 import React from 'react'
 import Mainscreen from './screens/Mainscreen'
 import Nav from './components/Nav'
-import Video from './components/Video'
-import { Route, Routes } from 'react-router'
+import { Route, Routes } from 'react-router' // ✅ react-router-dom se
 import Details from './screens/Details'
 
 const App = () => {
   return (
     <>
-    
-    <Nav />
-    <Routes>
-      <Route path="/" element={<Mainscreen />} />
-      <Route path="/details" element={<Details />} />
-    </Routes>
-      
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Mainscreen />} />
+        {/* :id param use karo */}
+        <Route path="/details/:id" element={<Details />} />
+      </Routes>
     </>
   )
 }

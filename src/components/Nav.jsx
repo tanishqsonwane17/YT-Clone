@@ -34,7 +34,7 @@ const Nav = () => {
         </li>
         <div className='flex items-center justify-center gap-3'>
           <li><i className="ri-search-line text-gray-300 text-xl"></i></li>
-          <li><i class="ri-vidicon-line text-gray-300"></i></li>
+          <li><i className="ri-vidicon-line text-gray-300"></i></li>
           <div className='h-7 w-7 rounded-full overflow-hidden '>
           <img
             className='w-full object-cover'
